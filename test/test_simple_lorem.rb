@@ -37,4 +37,46 @@ class HolaTest < Minitest::Test
     assert_equal expected_result,
       SimpleLorem.sentences(2)
   end
+
+  def test_less_than_one_word
+    expected_result = 'Lorem'
+
+    assert_equal expected_result,
+      SimpleLorem.words(-3)
+  end
+
+  def test_one_word
+    expected_result = 'Lorem'
+
+    assert_equal expected_result,
+      SimpleLorem.words
+  end
+
+  def test_more_than_one_words
+    expected_result = 'Lorem ipsum'
+
+    assert_equal expected_result,
+      SimpleLorem.words(2)
+  end
+
+  def test_less_than_one_char
+    expected_result = 'L'
+
+    assert_equal expected_result,
+      SimpleLorem.chars(-3)
+  end
+
+  def test_one_char
+    expected_result = 'L'
+
+    assert_equal expected_result,
+      SimpleLorem.chars
+  end
+
+  def test_more_than_one_chars
+    expected_result = 'Lo'
+
+    assert_equal expected_result,
+      SimpleLorem.chars(2)
+  end
 end

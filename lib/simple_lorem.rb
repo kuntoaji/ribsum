@@ -28,4 +28,22 @@ module SimpleLorem
 
     @_sentences[index] ||= PARAGRAPH.split('.')[0..index].map{|sentence| sentence.strip }.join('. ')
   end
+
+  def words(total = 1)
+    total = 1 if total.to_i < 1
+
+    index = total - 1
+    @_words ||= {}
+
+    @_words[index] ||= PARAGRAPH.gsub('.', '').gsub(',', '').split(' ')[0..index].join(' ')
+  end
+
+  def chars(total = 1)
+    total = 1 if total.to_i < 1
+
+    index = total - 1
+    @_chars ||= {}
+
+    @_chars[index] ||= PARAGRAPH.gsub('.', '').gsub(',', '').gsub(' ', '')[0..index]
+  end
 end
