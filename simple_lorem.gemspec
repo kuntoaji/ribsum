@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   EOF
   s.authors     = ["Kunto Aji Kristianto"]
   s.email       = "kuntoaji@kaklabs.com"
-  s.files       = `git ls-files -z`.split("\x0")
+  s.files       = ['lib/simple_lorem.rb', 'lib/simple_lorem/version.rb']
   s.homepage    = "https://github.com/kuntoaji/simple_lorem"
   s.license     = "MIT"
 
