@@ -4,17 +4,17 @@ require "simple_lorem"
 class HolaTest < Minitest::Test
   def test_less_than_one_paragraph
     assert_equal SimpleLorem::PARAGRAPH,
-      SimpleLorem.paragraph(-3)
+      SimpleLorem.paragraphs(-3)
   end
 
   def test_one_paragraph
     assert_equal SimpleLorem::PARAGRAPH,
-      SimpleLorem.paragraph
+      SimpleLorem.paragraphs
   end
 
   def test_more_than_one_paragraph
     assert_equal "#{SimpleLorem::PARAGRAPH}\n\n#{SimpleLorem::PARAGRAPH}",
-      SimpleLorem.paragraph(2)
+      SimpleLorem.paragraphs(2)
   end
 
   def test_less_than_one_sentence
